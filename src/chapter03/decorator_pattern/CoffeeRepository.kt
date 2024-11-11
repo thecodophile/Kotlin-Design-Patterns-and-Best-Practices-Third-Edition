@@ -1,9 +1,9 @@
-package Chapter03.decorator_pattern
+package chapter03.decorator_pattern
 
-class SimpleCoffeeRepository : CoffeeRepository {
+/*open class CoffeeRepository {
     private var cost: Double = 5.0
     private var description: String = "Simple Coffee"
-    override fun getCoffee(usersChoice: String, expectedCost: Double): String {
+    open fun getCoffee(usersChoice: String, expectedCost: Double): String {
         return if (description == usersChoice && cost == expectedCost) {
             "Here's your coffee $description; it costs $cost rupees."
         } else {
@@ -11,8 +11,13 @@ class SimpleCoffeeRepository : CoffeeRepository {
         }
     }
 
-    override fun makeCoffee(usersChoice: String, expectedCost: Double) {
+    open fun makeCoffee(usersChoice: String, expectedCost: Double) {
         description = usersChoice
         cost = expectedCost
     }
+}*/
+
+interface CoffeeRepository {
+    fun getCoffee(usersChoice: String, expectedCost: Double):String
+    fun makeCoffee(usersChoice: String, expectedCost: Double)
 }

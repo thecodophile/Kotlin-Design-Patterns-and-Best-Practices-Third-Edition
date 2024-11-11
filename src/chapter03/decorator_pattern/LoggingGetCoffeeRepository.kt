@@ -1,4 +1,4 @@
-package Chapter03.decorator_pattern
+package chapter03.decorator_pattern
 
 /*class LoggingGetCoffeeRepository : CoffeeRepository() {
     override fun getCoffee(usersChoice: String, expectedCost: Double): String {
